@@ -23,7 +23,7 @@ a:hover{
 
 /* main */
 main{
-    background-color: rgb(222, 199, 199);
+    background-color: rgba(226, 161, 63, 0.314);
 }
 .card{
     width: calc(95% / 3);

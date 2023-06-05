@@ -1,26 +1,10 @@
 <?php 
-include_once __DIR__ . '../../../database/db.php';
-
+    include_once __DIR__ . '../../../database/db.php';
 ?>
 
 <main class="d-flex justify-content-between align-items-start flex-wrap p-5 ">
     <!-- <div class="card1"> -->
         <?php foreach ($arrayProducts as $el) {?>
-            
-            <!-- <p> -->
-                <!-- <?php 
-    
-                    if($el -> getClassName()=== 'Food'){
-                        echo "Food";
-                    }elseif($el -> getClassName()=== 'Game'){
-                        echo "Game";
-                    }elseif($el -> getClassName()=== 'Accessory'){
-                        echo "Accessory";
-                    }
-                
-                ?> -->
-            <!-- </p> -->
-    
             <!-- card -->
             <div class="card mb-4 p-3 position-relative">
                 <!-- icon -->
@@ -48,6 +32,16 @@ include_once __DIR__ . '../../../database/db.php';
                             echo "<strong> $el->price &euro;</strong>";
                             ?>
                     </span>
+                    <?php 
+                        if($el->getClassName() === 'Food' or $el->getClassName() === 'Accessory'){
+                            echo "<span class='d-block'>Size: 
+                            <strong> $el->petSize </strong>
+                            </span>";
+                        }else{
+                            echo "<span class='d-block'>For any size of pet
+                            </span>";
+                        }
+                    ?>
                     <span class="d-block text-decoration-underline">Descrizione:</span>
                     <p class="card-text">
                         <?php echo $el ->Description ?>
