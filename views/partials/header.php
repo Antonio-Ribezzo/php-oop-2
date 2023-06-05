@@ -16,7 +16,7 @@
 <body>
     <!-- header -->
     <!-- alert bar -->
-    <div id="ciao" class="d-flex justify-content-center align-items-center p-1 text-white bg-black">
+    <div id="alertBar" class="d-flex justify-content-center align-items-center p-1 text-white bg-black">
         <span>20% di sconto per ordini superiori a 50 &euro;</span>
     </div>
     <header class="d-flex justify-content-between align-items-center px-5">
