@@ -22,8 +22,12 @@ include_once __DIR__ . '../../../database/db.php';
             <!-- </p> -->
     
             <!-- card -->
-            <div class="card mb-3 p-3">
-                <img class="productImg" src="<?php echo $el ->image ?>" class="card-img-top" alt="...">
+            <div class="card mb-4 p-3 position-relative">
+                <!-- icon -->
+                <div class="position-absolute">
+                    <i class="<?php echo $el->category->icon?>"></i>
+                </div>
+                <img class="productImg align-self-center" src="<?php echo $el ->image ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2><?php echo $el ->name ?></h2>
                     <span>Category: 

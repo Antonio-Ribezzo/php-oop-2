@@ -26,12 +26,19 @@ main{
     background-color: rgb(222, 199, 199);
 }
 .card{
-    width: calc(90% / 3);
+    width: calc(95% / 3);
 }
 
 .card:hover{
     cursor: pointer;
     scale: 102%;
 }
+
+.productImg{
+    height: 12rem;
+}
+
+.fa-solid{
+    font-size: 1.5rem;}
 
 
