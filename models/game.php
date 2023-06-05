@@ -4,15 +4,22 @@ require_once __DIR__ .  '/product.php';
 class Game extends Product{
     // property
     public $brand;
-    public $description;
+    public $name;
+    public $Description;
     public $image;
     // constructor
-    public function __construct($_type_of_product, $_type_of_animal, $_price, $_brand, $_description, $_image)
+    public function __construct($_type_of_product, $_type_of_animal, $_price, $_brand, $_name, $_Description, $_image)
     {
         parent::__construct($_type_of_product, $_type_of_animal, $_price);
         $this->brand = $_brand;
-        $this->description = $_description;
+        $this->name = $_name;
+        $this->Description = $_Description;
         $this->image = $_image;
+    }
+
+    // methods
+    public function getClassName(){
+        return get_class();
     }
 }
 
