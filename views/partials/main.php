@@ -1,5 +1,7 @@
 <?php 
     include_once __DIR__ . '../../../database/db.php';
+    include_once __DIR__ . '../../../models/product.php';
+
 ?>
 
 <main class="d-flex justify-content-between align-items-start flex-wrap p-5 ">
@@ -9,7 +11,7 @@
             <div class="card mb-4 p-3 position-relative">
                 <!-- icon -->
                 <div class="position-absolute">
-                    <i class="<?php echo $el->category->icon?>"></i>
+                    <?php echo $el->getCategoryIcon() ?>
                 </div>
                 <img class="productImg align-self-center" src="<?php echo $el ->image ?>" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -43,8 +45,18 @@
                         }
                     ?>
                     <span class="d-block text-decoration-underline">Descrizione:</span>
-                    <p class="card-text">
+                    <p class="card-text m-0">
                         <?php echo $el ->Description ?>
+                    </p>
+                    <span class="d-block text-decoration-underline">Sconto:</span>
+                    <p class="card-text">
+                        <?php 
+                            try{
+                                $el ->setDiscount($el->price);
+                            }catch(Exception $e){
+                                echo $e ->getMessage();
+                            }
+                        ?>
                     </p>
                 </div>
             </div>

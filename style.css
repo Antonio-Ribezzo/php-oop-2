@@ -3,6 +3,10 @@ header, footer{
     background-color: rgba(226, 161, 63, 0.515);
 }
 
+#ciao{
+    font-size: 0.5rem;
+}
+
 nav>ul{
     list-style: none;
     list-style-position: inside;

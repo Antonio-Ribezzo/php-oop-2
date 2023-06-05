@@ -3,7 +3,9 @@
     trait petSize{
         public $petSize;
 
-        public Function getSize(){
+       
+
+        public function getSize(){
             return $this->petSize;
         }
     }
